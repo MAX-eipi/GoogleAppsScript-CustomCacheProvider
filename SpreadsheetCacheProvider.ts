@@ -1,6 +1,6 @@
-import { CustomCacheService } from "./CustomCacheProvider";
+import { CustomCacheProvider } from "./CustomCacheProvider";
 
-export class SpreadsheetCacheProvider implements CustomCacheService {
+export class SpreadsheetCacheProvider implements CustomCacheProvider {
 
     public constructor(private readonly _sheet: GoogleAppsScript.Spreadsheet.Sheet) { }
 
