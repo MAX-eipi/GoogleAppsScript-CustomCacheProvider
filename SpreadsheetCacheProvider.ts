@@ -4,12 +4,12 @@ export class SpreadsheetCacheProvider implements CustomCacheProvider {
 
     public constructor(private readonly _sheet: GoogleAppsScript.Spreadsheet.Sheet) { }
 
-    private _intermediateCache: Record<string, any> = null;
+    private _intermediateCache: Record<string, unknown> = null;
     private _keyToIndexMap: Record<string, number> = {};
     private _keys: string[] = [];
     private _putKeyRequests: string[] = [];
 
-    private getIntermediateCahe(): Record<string, any> {
+    private getIntermediateCahe(): Record<string, unknown> {
         if (!this._intermediateCache) {
             this._intermediateCache = {};
             const rows = this._sheet.getDataRange().getValues();

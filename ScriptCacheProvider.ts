@@ -11,7 +11,7 @@ export class ScriptCacheProvider implements CustomCacheProvider {
         return this._cache;
     }
 
-    private _intermediateCache: Record<string, any> = {};
+    private _intermediateCache: Record<string, unknown> = {};
     private _putKeyRequests: string[] = [];
 
     public get<T>(key: string): T {
