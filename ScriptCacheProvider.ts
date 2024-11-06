@@ -1,6 +1,4 @@
-import { CustomCacheProvider } from "./CustomCacheProvider";
-
-export class ScriptCacheProvider implements CustomCacheProvider {
+class ScriptCacheProvider implements CustomCacheProvider {
     public expirationInSeconds = 600;
 
     private _cache: GoogleAppsScript.Cache.Cache = null;
